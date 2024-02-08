@@ -1,4 +1,10 @@
 html {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
+}
+
+body {
+  background-image: url(/images/bg_home.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 239px;
 }/*# sourceMappingURL=home.css.map */
