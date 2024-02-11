@@ -52,9 +52,7 @@ body {
   background-image: url('/images/bg_home.webp');
   background-repeat: no-repeat;
   background-size: 100% 239px;
-  padding-top: 5px;
-
-  padding-bottom: 12px;
+  padding: 12px 0;
   background-position-y: -$mobile-bar-height - $page-header-height;
 }
 

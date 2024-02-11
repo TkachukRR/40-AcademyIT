@@ -80,8 +80,7 @@ body {
   background-image: url("/images/bg_home.webp");
   background-repeat: no-repeat;
   background-size: 100% 239px;
-  padding-top: 5px;
-  padding-bottom: 12px;
+  padding: 12px 0;
   background-position-y: -91px;
 }
 
@@ -110,6 +109,45 @@ body {
 .header .navigation__notifications a, .header .navigation__bookmarks a, .header .navigation__menu a {
   width: 25px;
   height: 24px;
+}
+
+.section:first-child {
+  margin-top: 9px;
+}
+.section:not(:last-child) {
+  margin-bottom: 22px;
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.section__title {
+  font-size: 22px;
+}
+.section__link {
+  font-size: 14px;
+  color: #0050ff;
+}
+
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.user__photo {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user__name {
+  font-size: 17px;
+  margin: 0;
+}
+.user__position {
+  font-size: 10px;
+  opacity: 0.6;
+  font-weight: 500;
 }
 
 .footer__nav {

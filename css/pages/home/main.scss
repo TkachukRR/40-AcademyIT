@@ -1,0 +1,47 @@
+.section {
+  &:first-child {
+    margin-top: 9px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+  }
+
+  &__link {
+    font-size: $font-size-xs;
+    color: $text-color-accent;
+  }
+}
+
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  &__photo {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: $font-size-l;
+    margin: 0;
+  }
+
+  &__position {
+    font-size: $font-size-xxxs;
+    opacity: $opacity-m;
+    font-weight: $font-weight-medium;
+  }
+}
