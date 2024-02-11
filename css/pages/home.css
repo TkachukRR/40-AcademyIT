@@ -31,6 +31,18 @@ button {
   width: 100%;
 }
 
+.scrollbar-no::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+.scrollbar-no::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.scrollbar-no::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 html {
   color: #000;
   font-family: "Quicksand", sans-serif;
@@ -215,6 +227,55 @@ body {
   font-size: 13px;
   font-weight: 600;
   color: #484d5c;
+}
+
+.reels__list {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 13px;
+  color: #fff;
+  padding-bottom: 24px;
+}
+@media (min-width: 830px) {
+  .reels__list {
+    justify-content: center;
+  }
+}
+.reels__card {
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+}
+.reels__card:hover {
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.3), 0px 0px 24px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.reels__card svg {
+  fill: #fff;
+}
+.reels__button--bookmark {
+  position: absolute;
+  top: 12px;
+  right: 11px;
+}
+.reels__button--up {
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+}
+.reels__button--up a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.reels__button--arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 11px;
 }
 
 .footer__nav {

@@ -28,3 +28,9 @@ $font-weight-semi: 600;
 $font-weight-bold: 700;
 
 $opacity-m: 0.6;
+
+$shadow-1: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+$shadow-2: 0px 8px 24px 0px rgba(0, 0, 0, 0.1),
+  0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+$shadow-2-hover: 0px 8px 24px 0px rgba(0, 0, 0, 0.3),
+  0px 0px 24px 0px rgba(0, 0, 0, 0.1) inset;
