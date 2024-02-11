@@ -40,3 +40,20 @@ body {
   background-blend-mode: hard-light;
   backdrop-filter: blur(15px);
 }
+
+.wrapper {
+  max-height: calc(100vh - $page-footer-height);
+  overflow: auto;
+}
+
+.main {
+  min-height: calc(100vh - $page-header-height - $page-footer-height);
+  margin-top: $page-header-height;
+  background-image: url('/images/bg_home.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 239px;
+  padding-top: 5px;
+
+  padding-bottom: 12px;
+  background-position-y: -$mobile-bar-height - $page-header-height;
+}

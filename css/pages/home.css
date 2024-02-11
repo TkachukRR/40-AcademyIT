@@ -69,6 +69,22 @@ body {
   backdrop-filter: blur(15px);
 }
 
+.wrapper {
+  max-height: calc(100vh - 83px);
+  overflow: auto;
+}
+
+.main {
+  min-height: calc(100vh - 37px - 83px);
+  margin-top: 37px;
+  background-image: url("/images/bg_home.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 239px;
+  padding-top: 5px;
+  padding-bottom: 12px;
+  background-position-y: -91px;
+}
+
 .header .navigation {
   display: flex;
   gap: 12px;
