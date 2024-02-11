@@ -230,3 +230,91 @@
     background: $background-ternary;
   }
 }
+
+.hot {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    padding-bottom: 24px;
+
+    -webkit-overflow-scrolling: touch;
+    font-size: $font-size-xxs;
+    color: $text-color-ternary;
+  }
+
+  &__card {
+    flex-shrink: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: $shadow-2;
+
+    &:hover {
+      box-shadow: $shadow-2-hover;
+    }
+  }
+}
+
+.education {
+  &__logo {
+    height: 33px;
+    margin-bottom: 6px;
+  }
+
+  &__header {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    font-size: $font-size-s;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    margin-bottom: 11px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+    font-size: $font-size-xxxs;
+    font-weight: $font-weight-semi;
+    color: $text-color-secondary;
+
+    @media (min-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    flex-shrink: 0;
+    width: 157px;
+
+    .card__info {
+      padding: 18px 9px 13px 23px;
+    }
+
+    .card__button {
+      display: inline-block;
+      height: 13px;
+      min-width: 36px;
+      padding: 0 4px;
+      margin-bottom: 6px;
+
+      border-radius: 4px;
+      background-color: $text-color-primary;
+      color: $text-color-ternary;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      line-height: normal;
+    }
+  }
+}

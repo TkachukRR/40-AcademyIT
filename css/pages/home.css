@@ -310,6 +310,79 @@ body {
   background: #f8f3f3;
 }
 
+.hot__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.hot__list {
+  display: flex;
+  gap: 10px;
+  overflow-y: auto;
+  padding-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  font-size: 13px;
+  color: #fff;
+}
+.hot__card {
+  flex-shrink: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+}
+.hot__card:hover {
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.3), 0px 0px 24px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.education__logo {
+  height: 33px;
+  margin-bottom: 6px;
+}
+.education__header {
+  margin-bottom: 0;
+}
+.education__description {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.4px;
+  margin-bottom: 11px;
+}
+.education__list {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 10px;
+  font-weight: 600;
+  color: #484d5c;
+}
+@media (min-width: 640px) {
+  .education__list {
+    justify-content: center;
+  }
+}
+.education__card {
+  flex-shrink: 0;
+  width: 157px;
+}
+.education__card .card__info {
+  padding: 18px 9px 13px 23px;
+}
+.education__card .card__button {
+  display: inline-block;
+  height: 13px;
+  min-width: 36px;
+  padding: 0 4px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .footer__nav {
   display: flex;
   justify-content: center;
