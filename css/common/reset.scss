@@ -9,6 +9,7 @@
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 ul {
@@ -17,4 +18,9 @@ ul {
 
 img {
   display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
