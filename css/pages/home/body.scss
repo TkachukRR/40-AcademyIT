@@ -1,0 +1,42 @@
+html {
+  color: $text-color-primary;
+
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+
+  background-color: $background-primary;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.bar {
+  height: $mobile-bar-height;
+  background-image: url('/images/bg_home.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 239px;
+  background-blend-mode: hard-light;
+  backdrop-filter: blur(25px);
+}
+
+.header {
+  position: fixed;
+  z-index: 999999;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  height: $page-header-height;
+
+  background-image: url('/images/bg_home.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 239px;
+  background-position-y: -$mobile-bar-height;
+  background-blend-mode: hard-light;
+  backdrop-filter: blur(15px);
+}
