@@ -150,6 +150,30 @@ body {
   font-weight: 500;
 }
 
+.coins {
+  padding-bottom: 12px;
+}
+.coins__more {
+  font-size: 14px;
+  color: #0050ff;
+}
+.coins__balance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 9px;
+}
+.coins__value {
+  font-size: 50px;
+}
+.coins__description {
+  font-size: 13px;
+  font-weight: 600;
+  color: #484d5c;
+}
+
 .footer__nav {
   display: flex;
   justify-content: center;
