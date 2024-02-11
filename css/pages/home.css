@@ -85,6 +85,13 @@ body {
   background-position-y: -91px;
 }
 
+.footer {
+  background-color: rgba(255, 255, 255, 0.3019607843);
+  height: 83px;
+  backdrop-filter: blur(40px);
+  padding-top: 7px;
+}
+
 .header .navigation {
   display: flex;
   gap: 12px;
@@ -103,4 +110,31 @@ body {
 .header .navigation__notifications a, .header .navigation__bookmarks a, .header .navigation__menu a {
   width: 25px;
   height: 24px;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  font-size: 10px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 48px;
+  color: #484d5c;
+}
+.footer__link svg {
+  fill: #484d5c;
+}
+.footer__link:active, .footer__link:hover, .footer__link:focus, .footer__link--active {
+  color: #0050ff;
+}
+.footer__link:active svg, .footer__link:hover svg, .footer__link:focus svg, .footer__link--active svg {
+  fill: #0050ff;
 }/*# sourceMappingURL=home.css.map */

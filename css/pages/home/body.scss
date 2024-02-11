@@ -57,3 +57,10 @@ body {
   padding-bottom: 12px;
   background-position-y: -$mobile-bar-height - $page-header-height;
 }
+
+.footer {
+  background-color: $background-secondary;
+  height: $page-footer-height;
+  backdrop-filter: blur(40px);
+  padding-top: 7px;
+}

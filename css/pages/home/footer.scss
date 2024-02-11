@@ -1,0 +1,39 @@
+.footer {
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+
+    font-size: $font-size-xxxs;
+
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+    width: 48px;
+
+    color: $text-color-secondary;
+
+    svg {
+      fill: $text-color-secondary;
+    }
+  }
+
+  &__link:active,
+  &__link:hover,
+  &__link:focus,
+  &__link--active {
+    color: $text-color-accent;
+
+    svg {
+      fill: $text-color-accent;
+    }
+  }
+}
