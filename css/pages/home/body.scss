@@ -26,6 +26,8 @@ body {
 .header {
   position: fixed;
   z-index: 999999;
+  top: 0;
+  left: 0;
 
   display: flex;
   align-items: flex-start;
@@ -42,12 +44,12 @@ body {
 }
 
 .wrapper {
-  max-height: calc(100vh - $page-footer-height);
+  max-height: calc(100% - $page-footer-height);
   overflow: auto;
 }
 
 .main {
-  min-height: calc(100vh - $page-header-height - $page-footer-height);
+  min-height: calc(100% - $page-header-height - $page-footer-height);
   margin-top: $page-header-height;
   background-image: url('/images/bg_home.webp');
   background-repeat: no-repeat;
@@ -57,8 +59,8 @@ body {
 }
 
 .footer {
-  background-color: $background-secondary;
   height: $page-footer-height;
+  -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   padding-top: 7px;
 }
