@@ -81,26 +81,31 @@ body {
   background-size: 100% 239px;
   background-position-y: -54px;
   background-blend-mode: hard-light;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
 }
 
 .wrapper {
-  max-height: calc(100% - 54px);
+  max-height: 100%;
   overflow: auto;
 }
 
 .main {
   min-height: calc(100% - 37px - 54px);
-  margin-top: 37px;
   background-image: url("/images/bg_home.webp");
   background-repeat: no-repeat;
   background-size: 100% 239px;
-  padding: 12px 0;
+  margin-top: 37px;
+  padding: 12px 0 54px;
   background-position-y: -91px;
 }
 
 .footer {
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  left: 0;
   height: 54px;
+  background-color: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   padding-top: 7px;
@@ -223,7 +228,7 @@ body {
   background-size: 105% 100%;
   background-position: center;
   background-image: url("/images/card_guide.png");
-  background-color: rgba(255, 255, 255, 0.7019607843);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .guide__img {
   align-self: flex-end;

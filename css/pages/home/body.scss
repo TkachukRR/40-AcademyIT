@@ -40,26 +40,33 @@ body {
   background-size: 100% 239px;
   background-position-y: -$mobile-bar-height;
   background-blend-mode: hard-light;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
 }
 
 .wrapper {
-  max-height: calc(100% - $page-footer-height);
+  // max-height: calc(100% - $page-footer-height);
+  max-height: 100%;
   overflow: auto;
 }
 
 .main {
   min-height: calc(100% - $page-header-height - $page-footer-height);
-  margin-top: $page-header-height;
   background-image: url('/images/bg_home.webp');
   background-repeat: no-repeat;
   background-size: 100% 239px;
-  padding: 12px 0;
+  margin-top: $page-header-height;
+  padding: 12px 0 $page-footer-height;
   background-position-y: -$mobile-bar-height - $page-header-height;
 }
 
 .footer {
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  left: 0;
+
   height: $page-footer-height;
+  background-color: $background-secondary;
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   padding-top: 7px;
