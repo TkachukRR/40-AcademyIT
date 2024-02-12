@@ -29,6 +29,9 @@
   max-width: $max-width-card-element;
   margin: 0 auto;
 
+  overflow: hidden;
+  border-radius: 30px;
+
   border-radius: 30px;
   box-shadow: $shadow-1;
 
@@ -110,11 +113,11 @@
     display: flex;
     gap: 8px;
     min-height: 200px;
-    overflow: hidden;
 
     background-repeat: no-repeat;
-    background-size: 105% 100%;
-    background-position: center;
+    background-size: 100% 243px;
+    background-repeat: no-repeat;
+    background-position-y: -73px;
     background-image: url('/images/card_guide.png');
     background-color: $background-secondary;
   }
@@ -266,8 +269,6 @@
 
   &__card {
     flex-shrink: 0;
-    border-radius: 30px;
-    overflow: hidden;
     box-shadow: $shadow-2;
 
     &:hover {
