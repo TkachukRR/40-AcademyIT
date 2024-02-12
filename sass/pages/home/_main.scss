@@ -110,10 +110,6 @@
 
 .guide {
   &__card {
-    display: flex;
-    gap: 8px;
-    min-height: 200px;
-
     background-repeat: no-repeat;
     background-size: 100% 243px;
     background-repeat: no-repeat;
@@ -122,8 +118,18 @@
     background-color: $background-secondary;
   }
 
+  &__link {
+    display: flex;
+    gap: 8px;
+  }
+
   &__img {
-    align-self: flex-end;
+    min-height: 200px;
+    display: flex;
+
+    img {
+      align-self: flex-end;
+    }
   }
 
   &__descr {

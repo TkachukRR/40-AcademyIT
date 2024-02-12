@@ -223,9 +223,6 @@ body {
 }
 
 .guide__card {
-  display: flex;
-  gap: 8px;
-  min-height: 200px;
   background-repeat: no-repeat;
   background-size: 100% 243px;
   background-repeat: no-repeat;
@@ -233,7 +230,15 @@ body {
   background-image: url("/images/card_guide.png");
   background-color: rgba(255, 255, 255, 0.7);
 }
+.guide__link {
+  display: flex;
+  gap: 8px;
+}
 .guide__img {
+  min-height: 200px;
+  display: flex;
+}
+.guide__img img {
   align-self: flex-end;
 }
 .guide__descr {
