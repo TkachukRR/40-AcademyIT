@@ -1,0 +1,73 @@
+.reels {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__list {
+    @extend %section__content;
+
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+    font-size: $font-size-xxs;
+    color: $text-color-ternary;
+
+    padding-bottom: 24px;
+
+    @media (min-width: 830px) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    position: relative;
+    box-shadow: $shadow-2;
+
+    &:hover {
+      box-shadow: $shadow-2-hover;
+    }
+
+    svg {
+      fill: $text-color-ternary;
+    }
+  }
+
+  &__button {
+    &--bookmark {
+      position: absolute;
+      top: 12px;
+      right: 11px;
+    }
+
+    &--up {
+      position: absolute;
+      bottom: 10px;
+      left: 9px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    &--arrow {
+      position: absolute;
+      bottom: 10px;
+      right: 11px;
+    }
+  }
+}

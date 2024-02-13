@@ -1,0 +1,36 @@
+.coins {
+  @extend %section;
+  margin-bottom: 10px;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__content {
+    @extend %section__content;
+  }
+
+  &__balance {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding-bottom: 11px;
+    border-bottom: 1px solid $border-color-primary;
+    margin-bottom: 9px;
+  }
+
+  &__value {
+    font-size: $font-size-xxl;
+  }
+
+  &__description {
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-semi;
+    color: $text-color-secondary;
+  }
+}

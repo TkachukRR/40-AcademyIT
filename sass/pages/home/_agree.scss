@@ -1,0 +1,57 @@
+.agree {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__content {
+    @extend %section__content;
+  }
+
+  &__reaction {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 47px 10px;
+
+    border-radius: 100px;
+    background: $background-ternary;
+  }
+
+  & .card {
+    @extend %card;
+    padding: 24px 18px 24px 14px;
+    background-color: $background-primary;
+
+    &__content {
+      @extend %card__content;
+      line-height: 28px;
+      letter-spacing: -0.4px;
+      margin-right: 30px;
+    }
+
+    &__title {
+      @extend %card__title;
+    }
+
+    &__buttons {
+      @extend %card__buttons;
+
+      top: 17px;
+      right: 20px;
+      gap: 14px;
+    }
+
+    &__btn {
+      @extend %card__btn;
+      justify-content: end;
+      width: 25px;
+    }
+  }
+}

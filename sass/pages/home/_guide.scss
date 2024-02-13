@@ -1,0 +1,62 @@
+.guide {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__content {
+    @extend %section__content;
+  }
+
+  & .card {
+    @extend %card;
+
+    background-repeat: no-repeat;
+    background-size: 100% 243px;
+    background-repeat: no-repeat;
+    background-position-y: -73px;
+    background-image: url('/images/card_guide.png');
+    background-color: $background-secondary;
+
+    &__content-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+
+    &__img {
+      min-height: 200px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__content {
+      @extend %card__content;
+
+      padding: 18px 22px 20px 0;
+      color: $text-color-secondary;
+    }
+
+    &__title {
+      @extend %card__title;
+      margin-bottom: 9px;
+      min-height: 2em;
+      color: $text-color-primary;
+    }
+
+    &__buttons {
+      @extend %card__buttons;
+      fill: $text-color-secondary;
+    }
+
+    &__btn {
+      @extend %card__btn;
+      justify-content: center;
+      width: 20px;
+    }
+  }
+}

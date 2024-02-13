@@ -1,36 +1,33 @@
 .header {
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .navigation {
     display: flex;
     gap: 12px;
 
-    &__coin,
-    &__notifications,
-    &__bookmarks,
-    &__menu,
-    &__coin a,
-    &__notifications a,
-    &__bookmarks a,
-    &__menu a {
+    &__item,
+    &__link {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    &__coin {
-      span {
-        min-width: 40px;
-      }
-    }
-
-    &__coin a {
-      gap: 4px;
-    }
-
-    &__notifications a,
-    &__bookmarks a,
-    &__menu a {
-      width: 25px;
       height: 24px;
+    }
+
+    &__link {
+      width: 25px;
+    }
+
+    &__link--coin {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      min-width: 62px;
+      gap: 4px;
+      width: auto;
     }
   }
 }

@@ -1,8 +1,11 @@
-@import '../common/reset';
 @import '../common/variables';
+@import '../common/general';
 @import '../common/elements';
 
-@import './home/body';
+@import '../common/placeholders';
+
+@import './home/page';
+
 @import './home/header';
 @import './home/main';
 @import './home/footer';

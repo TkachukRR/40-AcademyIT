@@ -1,0 +1,27 @@
+.daily {
+  &__card {
+    padding: 13px 45px 26px 24px;
+
+    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+    box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+
+  &__header {
+    font-size: 44px;
+    line-height: 0;
+    letter-spacing: -0.4px;
+    margin-bottom: 29px;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 24px; /* 120% */
+  }
+  &__btn {
+    fill: #fff;
+  }
+}

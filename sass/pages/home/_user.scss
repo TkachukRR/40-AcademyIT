@@ -1,0 +1,23 @@
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 34px;
+
+  &__photo {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: $font-size-l;
+    margin: 0;
+  }
+
+  &__position {
+    font-size: $font-size-xxxs;
+    opacity: $opacity-m;
+    font-weight: $font-weight-medium;
+  }
+}
