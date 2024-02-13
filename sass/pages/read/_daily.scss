@@ -1,0 +1,45 @@
+.daily {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__content {
+    @extend %section__content;
+  }
+
+  & .card {
+    @extend %card;
+
+    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+    box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+
+    &__content {
+      @extend %card__content;
+      padding: 13px 45px 26px 24px;
+
+      color: $text-color-ternary;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__title {
+      @extend %card__title;
+      font-size: 44px;
+      line-height: 0;
+      letter-spacing: -0.4px;
+      margin-bottom: 29px;
+    }
+
+    &__buttons {
+      @extend %card__buttons;
+      fill: $text-color-ternary;
+    }
+  }
+}
