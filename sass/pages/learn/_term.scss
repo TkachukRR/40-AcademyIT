@@ -1,0 +1,44 @@
+.term {
+  @extend %section;
+  margin-bottom: 19px;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__content {
+    @extend %section__content;
+  }
+
+  & .card {
+    @extend %card;
+    background-color: $background-primary;
+
+    &__content {
+      @extend %card__content;
+      padding: 18px 45px 24px 22px;
+
+      color: $text-color-secondary;
+      font-size: $font-size-xxs;
+    }
+
+    &__title {
+      @extend %card__title;
+
+      color: $text-color-primary;
+      line-height: 28px;
+      margin-bottom: 5px;
+    }
+
+    &__buttons {
+      @extend %card__buttons;
+      fill: $text-color-secondary;
+      top: 18px;
+      right: 16px;
+    }
+  }
+}

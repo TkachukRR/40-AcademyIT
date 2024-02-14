@@ -90,6 +90,52 @@ button {
   backdrop-filter: blur(40px);
 }
 
+.term {
+  margin-bottom: 22px;
+}
+.term:last-child {
+  margin-bottom: 0;
+}
+.term__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+}
+.term__link {
+  color: #0050ff;
+  font-size: 14px;
+}
+.term__content {
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+
+.term .card {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+}
+.term .card__content {
+  font-size: 13px;
+  font-weight: 600;
+}
+.term .card__title {
+  font-size: 22px;
+}
+.term .card__buttons {
+  position: absolute;
+  top: 21px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  justify-content: space-around;
+}
 .header__navigation {
   display: flex;
   align-items: center;
@@ -153,4 +199,26 @@ button {
   background-image: url("/images/bg_learn.webp");
   background-repeat: no-repeat;
   background-size: 100% 297px;
+}
+
+.term {
+  margin-bottom: 19px;
+}
+.term .card {
+  background-color: #fff;
+}
+.term .card__content {
+  padding: 18px 45px 24px 22px;
+  color: #484d5c;
+  font-size: 13px;
+}
+.term .card__title {
+  color: #000;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+.term .card__buttons {
+  fill: #484d5c;
+  top: 18px;
+  right: 16px;
 }/*# sourceMappingURL=learn.css.map */
