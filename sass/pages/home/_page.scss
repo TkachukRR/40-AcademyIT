@@ -2,15 +2,14 @@
   @extend %header;
 
   background-color: transparent;
-
-  background-image: url('/images/bg_home.webp');
-  background-repeat: no-repeat;
-  background-size: 100% 239px;
 }
 
 .main {
   @extend %main;
+}
 
+.header,
+.main {
   background-image: url('/images/bg_home.webp');
   background-repeat: no-repeat;
   background-size: 100% 239px;

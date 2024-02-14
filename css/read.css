@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   color: #000;
@@ -188,11 +192,9 @@ button {
 
 .header {
   background-color: transparent;
-  background-image: url("/images/bg_read.webp");
-  background-repeat: no-repeat;
-  background-size: 100% 297px;
 }
 
+.header,
 .main {
   background-image: url("/images/bg_read.webp");
   background-repeat: no-repeat;
