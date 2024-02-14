@@ -255,7 +255,7 @@ button {
   display: flex;
   gap: 10px;
   justify-content: start;
-  overflow-y: auto;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   font-size: 13px;
   color: #fff;
@@ -363,7 +363,7 @@ button {
   display: flex;
   justify-content: start;
   gap: 10px;
-  overflow-y: auto;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   font-size: 10px;
   font-weight: 600;
