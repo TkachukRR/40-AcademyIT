@@ -15,7 +15,7 @@
     display: flex;
     gap: 10px;
     justify-content: start;
-    overflow-y: auto;
+    overflow-x: auto;
 
     -webkit-overflow-scrolling: touch;
     font-size: $font-size-xxs;
