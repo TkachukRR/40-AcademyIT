@@ -1,0 +1,21 @@
+.header {
+  @extend %header;
+
+  background-color: transparent;
+
+  background-image: url('/images/bg_learn.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 297px;
+}
+
+.main {
+  @extend %main;
+
+  background-image: url('/images/bg_learn.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 297px;
+}
+
+.footer {
+  @extend %footer;
+}
