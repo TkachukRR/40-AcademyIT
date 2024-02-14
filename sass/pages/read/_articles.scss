@@ -63,27 +63,28 @@
   scroll-snap-type: x mandatory; // disable interim slider position
   width: 100%;
   max-width: 600px;
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid $border-color-primary;
+    cursor: grab;
+    user-select: none;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &:nth-of-type(3n) {
+      border-bottom: none;
+      scroll-snap-align: center; // disable interim slider position
+    }
+  }
 }
 
 .slide {
-  width: 100%;
   display: flex;
   gap: 10px;
   padding: 10px 0;
-  background-color: #fff;
-  border-bottom: 1px solid #d7d7d7;
-  box-sizing: border-box;
-  cursor: grab;
-  user-select: none;
-
-  &:active {
-    cursor: grabbing;
-  }
-
-  &:nth-of-type(3n) {
-    border-bottom: none;
-    scroll-snap-align: center; // disable interim slider position
-  }
 
   &__card {
     position: relative;
@@ -91,7 +92,7 @@
     overflow: hidden;
     flex-basis: 141px;
 
-    button {
+    svg {
       position: absolute;
       top: 9px;
       right: 8px;
@@ -131,8 +132,7 @@
 .stick {
   display: flex;
   align-items: center;
-  fill: rgba(0, 0, 0, 0.3);
-
+  fill: $pagination-stick-color;
   &__checkbox {
     display: block;
     height: 0;
@@ -141,7 +141,7 @@
   }
 
   &__checkbox:checked + &__svg {
-    fill: rgba(0, 0, 0);
+    fill: $pagination-stick-color-active;
   }
 
   &__svg {

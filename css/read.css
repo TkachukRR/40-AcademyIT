@@ -271,24 +271,24 @@ button {
   width: 100%;
   max-width: 600px;
 }
-
-.slide {
+.slider__item {
   width: 100%;
-  display: flex;
-  gap: 10px;
-  padding: 10px 0;
-  background-color: #fff;
   border-bottom: 1px solid #d7d7d7;
-  box-sizing: border-box;
   cursor: grab;
   user-select: none;
 }
-.slide:active {
+.slider__item:active {
   cursor: grabbing;
 }
-.slide:nth-of-type(3n) {
+.slider__item:nth-of-type(3n) {
   border-bottom: none;
   scroll-snap-align: center;
+}
+
+.slide {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
 }
 .slide__card {
   position: relative;
@@ -296,7 +296,7 @@ button {
   overflow: hidden;
   flex-basis: 141px;
 }
-.slide__card button {
+.slide__card svg {
   position: absolute;
   top: 9px;
   right: 8px;
@@ -330,7 +330,7 @@ button {
 .stick {
   display: flex;
   align-items: center;
-  fill: rgba(0, 0, 0, 0.3);
+  fill: rgba(0, 0, 0, 0.3019607843);
 }
 .stick__checkbox {
   display: block;
@@ -339,7 +339,7 @@ button {
   visibility: hidden;
 }
 .stick__checkbox:checked + .stick__svg {
-  fill: rgb(0, 0, 0);
+  fill: #000000;
 }
 .stick__svg {
   width: 100%;
@@ -360,7 +360,7 @@ button {
   position: relative;
   fill: #fff;
 }
-.books__item button {
+.books__item svg {
   position: absolute;
   top: 11px;
   right: 21px;
