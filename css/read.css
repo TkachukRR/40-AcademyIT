@@ -231,6 +231,11 @@ button {
   font-size: 12px;
   color: #0050ff;
 }
+@media (min-width: 640px) {
+  .articles .filter {
+    justify-content: center;
+  }
+}
 .articles .filter .button__content {
   display: inline-flex;
   gap: 4px;
