@@ -1,0 +1,74 @@
+.flashcards {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__list {
+    @extend %section__content;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  & .card {
+    @extend %card;
+    height: 170px;
+    width: 322px;
+
+    padding: 18px 18px 21px;
+
+    color: $text-color-ternary;
+    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+
+    &__content {
+      @extend %card__content;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+    &__text {
+      font-size: 26px;
+    }
+    &__progress {
+      font-weight: $font-weight-semi;
+    }
+
+    &__bar {
+      margin-top: 5px;
+      height: 4px;
+      background-color: rgba(235, 235, 245, 0.16);
+      border-radius: 2px;
+    }
+
+    &__bar-inner {
+      height: 4px;
+      border-radius: 2px;
+      background-color: $text-color-ternary;
+
+      width: 0;
+      //   width: 5 / 25 * 100%;
+      min-width: 4px !important;
+    }
+
+    &__markers {
+      @extend %card__buttons;
+      top: 18px;
+      fill: $text-color-ternary;
+    }
+  }
+}

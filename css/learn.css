@@ -90,28 +90,28 @@ button {
   backdrop-filter: blur(40px);
 }
 
-.term {
+.flashcards, .term {
   margin-bottom: 22px;
 }
-.term:last-child {
+.flashcards:last-child, .term:last-child {
   margin-bottom: 0;
 }
-.term__title {
+.flashcards__title, .term__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 22px;
 }
-.term__link {
+.flashcards__link, .term__link {
   color: #0050ff;
   font-size: 14px;
 }
-.term__content {
+.flashcards__list, .term__content {
   padding-top: 12px;
   padding-bottom: 24px;
 }
 
-.term .card {
+.flashcards .card, .term .card {
   position: relative;
   max-width: 480px;
   margin: 0 auto;
@@ -119,14 +119,14 @@ button {
   border-radius: 30px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
 }
-.term .card__content {
+.flashcards .card__content, .term .card__content {
   font-size: 13px;
   font-weight: 600;
 }
 .term .card__title {
   font-size: 22px;
 }
-.term .card__buttons {
+.flashcards .card__markers, .term .card__buttons {
   position: absolute;
   top: 21px;
   right: 18px;
@@ -221,4 +221,52 @@ button {
   fill: #484d5c;
   top: 18px;
   right: 16px;
+}
+
+.flashcards__list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.flashcards__item {
+  flex-shrink: 0;
+}
+.flashcards .card {
+  height: 170px;
+  width: 322px;
+  padding: 18px 18px 21px;
+  color: #fff;
+  background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+}
+.flashcards .card__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flashcards .card__title {
+  font-size: 12px;
+}
+.flashcards .card__text {
+  font-size: 26px;
+}
+.flashcards .card__progress {
+  font-weight: 600;
+}
+.flashcards .card__bar {
+  margin-top: 5px;
+  height: 4px;
+  background-color: rgba(235, 235, 245, 0.16);
+  border-radius: 2px;
+}
+.flashcards .card__bar-inner {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 0;
+  min-width: 4px !important;
+}
+.flashcards .card__markers {
+  top: 18px;
+  fill: #fff;
 }/*# sourceMappingURL=learn.css.map */
