@@ -1,0 +1,130 @@
+.quizzing {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__list {
+    @extend %section__content;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+
+    @media (min-width: 830px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  .card {
+    @extend %card;
+    width: 322px;
+    background: linear-gradient(
+      180deg,
+      rgba(220, 220, 233, 0.3) 0%,
+      #c7c7d3 100%
+    );
+    backdrop-filter: blur(25px);
+
+    &__content {
+      @extend %card__content;
+      padding: 18px 19px 20px 21px;
+    }
+
+    &__sub {
+      display: inline-block;
+      margin-bottom: 9px;
+
+      font-size: 12px;
+      line-height: 17px;
+
+      background-image: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+
+    &__title {
+      @extend %card__title;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+    }
+
+    &__text {
+      line-height: 18px;
+      letter-spacing: -0.4px;
+      min-height: 96px;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__btn {
+      border-radius: 100px;
+      width: 120px;
+      height: 32px;
+      background: var(--Colors-Blue-DMI, #0050ff);
+
+      color: $text-color-ternary;
+      text-align: center;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+    }
+
+    &__markers {
+      @extend %card__buttons;
+      top: 15px;
+      right: 19px;
+    }
+  }
+
+  .designers {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    &__stats {
+      width: 93px;
+
+      color: $text-color-secondary;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: $font-weight-semi;
+      line-height: 13px;
+    }
+  }
+
+  .avatars {
+    display: flex;
+
+    &__item {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $text-color-ternary;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &:not(:first-of-type) {
+        margin-left: -15px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
