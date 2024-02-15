@@ -90,13 +90,13 @@ button {
   backdrop-filter: blur(40px);
 }
 
-.webinars, .quizzing, .flashcards, .term {
+.education, .webinars, .quizzing, .flashcards, .term {
   margin-bottom: 22px;
 }
-.webinars:last-child, .quizzing:last-child, .flashcards:last-child, .term:last-child {
+.education:last-child, .webinars:last-child, .quizzing:last-child, .flashcards:last-child, .term:last-child {
   margin-bottom: 0;
 }
-.webinars__title, .quizzing__title, .flashcards__title, .term__title {
+.education__title, .webinars__title, .quizzing__title, .flashcards__title, .term__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,7 +106,7 @@ button {
   color: #0050ff;
   font-size: 14px;
 }
-.webinars__list, .quizzing__list, .flashcards__list, .term__content {
+.education__content, .webinars__list, .quizzing__list, .flashcards__list, .term__content {
   padding-top: 12px;
   padding-bottom: 24px;
 }
@@ -512,4 +512,53 @@ button {
 .webinars .avatars__item img {
   width: 100%;
   height: 100%;
+}
+
+.education__logo {
+  height: 33px;
+  margin-bottom: 6px;
+}
+.education__content {
+  padding-top: 0;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.4px;
+}
+.education__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+  font-size: 10px;
+  font-weight: 600;
+  color: #484d5c;
+}
+@media (min-width: 640px) {
+  .education__list {
+    justify-content: center;
+  }
+}
+.education__card {
+  flex-shrink: 0;
+  display: flex;
+  gap: 12px;
+  max-width: 400px;
+}
+.education__card .card__info {
+  font-size: 13px;
+}
+.education__card .card__button {
+  display: inline-block;
+  height: 13px;
+  min-width: 36px;
+  padding: 0 4px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 10px;
 }/*# sourceMappingURL=learn.css.map */

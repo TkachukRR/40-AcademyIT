@@ -1,0 +1,63 @@
+.education {
+  @extend %section;
+
+  &__logo {
+    height: 33px;
+    margin-bottom: 6px;
+  }
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__content {
+    @extend %section__content;
+    padding-top: 0;
+    font-size: $font-size-s;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    -webkit-overflow-scrolling: touch;
+    font-size: $font-size-xxxs;
+    font-weight: $font-weight-semi;
+    color: $text-color-secondary;
+
+    @media (min-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    flex-shrink: 0;
+    display: flex;
+    gap: 12px;
+    max-width: 400px;
+
+    .card__info {
+      font-size: $font-size-xxs;
+    }
+
+    .card__button {
+      display: inline-block;
+      height: 13px;
+      min-width: 36px;
+      padding: 0 4px;
+      margin-bottom: 6px;
+
+      border-radius: 4px;
+      background-color: $text-color-primary;
+      color: $text-color-ternary;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      line-height: normal;
+      font-size: $font-size-xxxs;
+    }
+  }
+}
