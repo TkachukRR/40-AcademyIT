@@ -1,0 +1,212 @@
+.webinars {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__link {
+    @extend %section__title-link;
+  }
+
+  &__list {
+    @extend %section__content;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+
+    @media (min-width: 830px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    margin: 0 auto;
+
+    border-radius: 30px;
+    background: #e8e8f1;
+  }
+
+  .card {
+    @extend %card;
+    width: 322px;
+
+    box-shadow: none;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+
+    &__bg--1 {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.4) 58.24%
+        ),
+        url(/images/webinars_1.jpg), lightgray 50% / cover no-repeat;
+    }
+
+    &__bg--2 {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.4) 58.24%
+        ),
+        url(/images/webinars_2.jpg), lightgray 50% / cover no-repeat;
+    }
+
+    &__bg--3 {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.4) 58.24%
+        ),
+        url(/images/webinars_3.jpg), lightgray 50% / cover no-repeat;
+    }
+
+    &__content {
+      @extend %card__content;
+      padding: 21px 16px 20px 19px;
+
+      color: $text-color-ternary;
+    }
+
+    &__text {
+      margin-top: 95px;
+      margin-bottom: 9px;
+      height: 86px;
+
+      font-size: $font-size-xxs;
+      font-weight: $font-weight-semi;
+      line-height: 17px;
+      letter-spacing: -0.4px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 25px; /* 125% */
+    }
+
+    &__title--accent {
+      text-transform: uppercase;
+    }
+
+    &__markers {
+      @extend %card__buttons;
+      top: 15px;
+      right: 19px;
+      fill: $text-color-ternary;
+    }
+
+    &__btn {
+      height: 21px;
+      position: absolute;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      color: $text-color-ternary;
+      background-color: #ff004e;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .thumb {
+    padding: 16px 20px 20px;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-radius: 100px;
+      padding: 7px 12px;
+      background: var(--Colors-Blue-DMI, #0050ff);
+
+      color: $text-color-ternary;
+      text-align: center;
+      font-size: 12px;
+      font-weight: $font-weight-bold;
+
+      .coin {
+        display: inline-flex;
+        gap: 3px;
+
+        font-size: 14px;
+      }
+    }
+  }
+
+  .host {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 12px;
+
+    &__photo {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &__name {
+      font-size: $font-size-s;
+      margin: 0;
+      line-height: 20px;
+      letter-spacing: -0.4px;
+    }
+
+    &__position {
+      font-size: $font-size-xxs;
+      color: $text-color-secondary;
+      font-weight: $font-weight-medium;
+      line-height: 18px;
+      letter-spacing: -0.4px;
+    }
+  }
+
+  .meeting {
+    margin-bottom: 6px;
+
+    color: $text-color-primary;
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-semi;
+    line-height: 18px;
+    letter-spacing: -0.4px;
+
+    .description {
+      color: $text-color-secondary;
+    }
+  }
+
+  .designers {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    &__stats {
+      width: 93px;
+      opacity: 0.8;
+      font-size: 11px;
+      font-weight: $font-weight-semi;
+      line-height: 13px;
+    }
+  }
+
+  .avatars {
+    display: flex;
+
+    &__item {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $text-color-ternary;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &:not(:first-of-type) {
+        margin-left: -15px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
