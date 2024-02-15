@@ -276,11 +276,6 @@ button {
   gap: 10px;
   overflow-x: auto;
 }
-@media (min-width: 830px) {
-  .quizzing__list {
-    justify-content: center;
-  }
-}
 .quizzing__item {
   flex-shrink: 0;
 }
