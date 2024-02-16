@@ -1,0 +1,140 @@
+@import '../common/variables';
+@import '../common/general';
+
+.close {
+  padding: 11px 0 16px 11px;
+  position: absolute;
+  z-index: 99999;
+  top: 13px;
+  left: 0;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(120, 120, 128, 0.36);
+  backdrop-filter: blur(25px);
+  overflow-y: auto;
+
+  .container {
+    margin-left: 54px;
+    padding: 0 22px 0 15px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  .user {
+    &__photo-balance {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 8px;
+    }
+
+    &__photo {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &__coins {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 5px;
+      font-size: 30px;
+      font-weight: $font-weight-bold;
+    }
+
+    &__name {
+      font-size: $font-size-l;
+      line-height: 0.5;
+      margin: 0;
+    }
+
+    &__position {
+      font-size: $font-size-xxxs;
+      font-weight: $font-weight-semi;
+      line-height: 1;
+      opacity: 0.6;
+    }
+  }
+
+  .profile {
+    padding: 7px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: $font-size-xs;
+    font-style: normal;
+    font-weight: $font-weight-semi;
+    line-height: 42px;
+    letter-spacing: -0.4px;
+    border-bottom: 1px solid $border-color-primary;
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    &__img {
+      display: flex;
+      align-items: center;
+      height: 15px;
+      width: 22px;
+    }
+  }
+
+  .pages {
+    padding: 17px 0;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: 25px;
+    letter-spacing: -0.4px;
+    text-transform: capitalize;
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      margin-bottom: 5px;
+    }
+
+    &__img {
+      display: flex;
+      align-items: center;
+      height: 21px;
+      width: 26px;
+    }
+
+    .articles {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: $font-size-xs;
+      font-style: normal;
+      font-weight: $font-weight-semi;
+      line-height: 42px;
+      letter-spacing: -0.4px;
+    }
+  }
+
+  .footer {
+    color: $text-color-secondary;
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-semi;
+    padding-top: 24px;
+
+    .cop {
+      padding-top: 12px;
+      color: #848998;
+      font-size: 11px;
+      font-weight: $font-weight-bold;
+      line-height: 13px;
+      letter-spacing: -0.4px;
+    }
+  }
+}

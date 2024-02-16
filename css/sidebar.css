@@ -1,0 +1,163 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close {
+  padding: 11px 0 16px 11px;
+  position: absolute;
+  z-index: 99999;
+  top: 13px;
+  left: 0;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(120, 120, 128, 0.36);
+  backdrop-filter: blur(25px);
+  overflow-y: auto;
+}
+.sidebar .container {
+  margin-left: 54px;
+  padding: 0 22px 0 15px;
+  background: rgba(255, 255, 255, 0.85);
+}
+.sidebar .user__photo-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+.sidebar .user__photo {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sidebar .user__coins {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.sidebar .user__name {
+  font-size: 17px;
+  line-height: 0.5;
+  margin: 0;
+}
+.sidebar .user__position {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  opacity: 0.6;
+}
+.sidebar .profile {
+  padding: 7px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: -0.4px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.sidebar .profile__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.sidebar .profile__img {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  width: 22px;
+}
+.sidebar .pages {
+  padding: 17px 0;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+  text-transform: capitalize;
+}
+.sidebar .pages__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+.sidebar .pages__img {
+  display: flex;
+  align-items: center;
+  height: 21px;
+  width: 26px;
+}
+.sidebar .pages .articles {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: -0.4px;
+}
+.sidebar .footer {
+  color: #484d5c;
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 24px;
+}
+.sidebar .footer .cop {
+  padding-top: 12px;
+  color: #848998;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: -0.4px;
+}/*# sourceMappingURL=sidebar.css.map */
