@@ -1,0 +1,136 @@
+@import '../common/variables';
+@import '../common/general';
+@import '../common/elements';
+
+@import '../common/placeholders';
+
+@import './home/header';
+@import './home/footer';
+
+.header {
+  @extend %header;
+
+  background-color: transparent;
+
+  &__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: ($page-header-height - 22px) / 2;
+    padding-right: 0;
+  }
+}
+
+.main {
+  @extend %main;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 43px;
+  padding-bottom: 38px;
+  .stats {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 999999;
+    font-size: $font-size-l;
+    line-height: 1;
+    transform: translateX(50%);
+    padding: (($page-header-height - $font-size-l) / 2) 0;
+
+    &__bar {
+      position: absolute;
+      bottom: -4px;
+      left: calc(50% - 100vw / 2);
+      height: 4px;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    &__bar-progress {
+      height: 100%;
+      border-radius: 2px;
+      width: 0;
+      min-width: 4px !important;
+      background-color: $text-color-accent;
+    }
+  }
+
+  .card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 27px 20px 30px;
+
+    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+    box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+
+    color: $text-color-ternary;
+    font-weight: $font-weight-bold;
+
+    &-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 36px;
+    }
+
+    &__header {
+      font-size: $font-size-xs;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+
+    &__body {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      font-size: 38px;
+      line-height: 42px;
+      margin-bottom: 33px;
+    }
+
+    &__footer {
+      height: 32px;
+    }
+  }
+
+  .sticks {
+    display: flex;
+    justify-content: space-between;
+    color: $text-color-ternary;
+    font-size: $font-size-m;
+    font-weight: $font-weight-semi;
+
+    &__lost {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #b9bdc7;
+      border-radius: 0px 100px 100px 0px;
+      padding: 6px 20px 6px 37px;
+    }
+
+    &__achived {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 100px 0px 0px 100px;
+      background: #1bc300;
+      padding: 6px 37px 6px 20px;
+    }
+  }
+}
+
+.header,
+.main {
+  background-image: url('/images/bg_flashcard.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 297px;
+}
+
+.footer {
+  @extend %footer;
+}
