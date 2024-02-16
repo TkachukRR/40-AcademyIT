@@ -64,10 +64,10 @@
     border-radius: 30px;
     padding: 27px 20px 30px;
 
-    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
-    box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+    box-shadow: 2px 10px 20px 0px rgba(0, 0, 0, 0.15);
 
-    color: $text-color-ternary;
+    background-color: $background-primary;
+    color: $text-color-primary;
     font-weight: $font-weight-bold;
 
     &-wrapper {
@@ -88,14 +88,31 @@
       display: flex;
       align-items: center;
       flex-grow: 1;
-      font-size: 38px;
-      line-height: 42px;
-      margin-bottom: 33px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 25px;
       padding: 0 5px;
     }
 
     &__footer {
       height: 32px;
+      display: flex;
+      gap: 14px;
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border-radius: 100px;
+        border: 1px solid #bbc0d0;
+        width: 100%;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 3px 15px;
+      }
     }
   }
 

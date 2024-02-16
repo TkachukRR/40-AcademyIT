@@ -207,7 +207,6 @@ button {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 5px;
-  padding: 0 5px;
 }
 .main .card__body {
   display: flex;
@@ -216,7 +215,6 @@ button {
   font-size: 38px;
   line-height: 42px;
   margin-bottom: 33px;
-  padding: 0 5px;
 }
 .main .card__footer {
   height: 32px;
@@ -250,4 +248,4 @@ button {
   background-image: url("/images/bg_flashcard.webp");
   background-repeat: no-repeat;
   background-size: 100% 297px;
-}/*# sourceMappingURL=flashcard.css.map */
+}/*# sourceMappingURL=flashcard copy.css.map */
