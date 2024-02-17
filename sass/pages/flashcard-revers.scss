@@ -27,7 +27,7 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 43px;
+  padding-top: $page-header-height + 43px;
   padding-bottom: 38px;
   .stats {
     position: absolute;
@@ -146,7 +146,6 @@
 .header,
 .main {
   background-image: url('/images/bg_flashcard.webp');
-  background-repeat: no-repeat;
   background-size: 100% 297px;
 }
 

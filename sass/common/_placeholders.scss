@@ -8,16 +8,27 @@
 
   background-color: rgba(255, 255, 255, 0.75);
   background-position-y: -$mobile-bar-height;
-  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+
   backdrop-filter: blur(25px);
 }
 
 %main {
-  min-height: calc(100% - $page-header-height - $page-footer-height);
-  margin-top: $page-header-height;
-  padding: 21px 0 $page-footer-height;
+  min-height: calc(100% - $page-header-height);
+  padding: (21px + $page-header-height) 0 $page-footer-height;
 
-  background-position-y: -$mobile-bar-height - $page-header-height;
+  background-position-y: -$mobile-bar-height;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $page-header-height;
+    width: 100%;
+    background-color: $background-primary;
+  }
 }
 
 %footer {

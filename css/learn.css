@@ -66,15 +66,24 @@ button {
   height: 37px;
   background-color: rgba(255, 255, 255, 0.75);
   background-position-y: -54px;
-  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
   backdrop-filter: blur(25px);
 }
 
 .main {
-  min-height: calc(100% - 37px - 54px);
-  margin-top: 37px;
-  padding: 21px 0 54px;
-  background-position-y: -91px;
+  min-height: calc(100% - 37px);
+  padding: 58px 0 54px;
+  background-position-y: -54px;
+  background-repeat: no-repeat;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 37px;
+  width: 100%;
+  background-color: #fff;
 }
 
 .footer {
@@ -197,7 +206,6 @@ button {
 .header,
 .main {
   background-image: url("/images/bg_learn.webp");
-  background-repeat: no-repeat;
   background-size: 100% 297px;
 }
 
