@@ -58,23 +58,63 @@
   }
 
   .card {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1500ms;
+    transition: all 1500ms;
+
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
     padding: 27px 20px 30px;
+    backface-visibility: hidden;
 
-    background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
-    box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+    &--revers {
+      box-shadow: 2px 10px 20px 0px rgba(0, 0, 0, 0.15);
 
-    color: $text-color-ternary;
-    font-weight: $font-weight-bold;
+      background: $background-primary;
+      color: $text-color-primary;
+      font-weight: $font-weight-semi;
+      font-size: $font-size-m;
+      line-height: 25px;
+      transform: rotateY(180deg);
+    }
+
+    &--avers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
+      box-shadow: 0px 14px 24px 0px rgba(80, 65, 247, 0.3);
+
+      font-size: 38px;
+      line-height: 42px;
+      color: $text-color-ternary;
+      font-weight: $font-weight-bold;
+    }
 
     &-wrapper {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
+      position: relative;
+    }
+
+    &-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
       padding-bottom: 36px;
+
+      position: relative;
+
+      #side-switcher {
+        display: none;
+      }
     }
 
     &__header {
@@ -88,14 +128,29 @@
       display: flex;
       align-items: center;
       flex-grow: 1;
-      font-size: 38px;
-      line-height: 42px;
       margin-bottom: 33px;
       padding: 0 5px;
     }
 
     &__footer {
       height: 32px;
+      display: flex;
+      gap: 14px;
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border-radius: 100px;
+        border: 1px solid #bbc0d0;
+        width: 100%;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 3px 4px;
+      }
     }
   }
 
@@ -134,4 +189,12 @@
 
 .footer {
   @extend %footer;
+}
+
+#side-switcher:checked + .card-wrapper > .card--avers {
+  transform: rotateY(180deg);
+}
+
+#side-switcher:checked + .card-wrapper > .card--revers {
+  transform: rotateY(0);
 }
