@@ -1,0 +1,47 @@
+@import '../common/variables';
+@import '../common/general';
+@import '../common/elements';
+
+@import '../common/placeholders';
+@import './home/footer';
+
+.header {
+  @extend %header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .buttons {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.main {
+  @extend %main;
+  height: 100%;
+  position: relative;
+  color: $text-color-ternary;
+  fill: $text-color-ternary;
+
+  .stats {
+    position: absolute;
+    left: 30px;
+    bottom: 35px + $page-footer-height;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.header,
+.main {
+  background-image: url('/images/bg_reels.webp');
+  background-size: cover;
+  color: $text-color-ternary;
+  fill: $text-color-ternary;
+}
+
+.footer {
+  @extend %footer;
+}
