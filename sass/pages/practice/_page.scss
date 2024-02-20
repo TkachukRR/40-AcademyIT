@@ -1,0 +1,17 @@
+.header {
+  @extend %header;
+}
+
+.main {
+  @extend %main;
+}
+
+.header,
+.main {
+  background-image: url('/images/bg_practice.webp');
+  background-size: 100% 239px;
+}
+
+.footer {
+  @extend %footer;
+}
