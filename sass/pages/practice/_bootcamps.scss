@@ -1,0 +1,26 @@
+.bootcamps {
+  @extend %section;
+
+  &__title {
+    @extend %section__title;
+  }
+
+  &__list {
+    @extend %section__content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: auto;
+
+    @media (min-width: 830px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .card {
+      @extend %card;
+      background: lightgray 50%;
+      box-shadow: $shadow-2;
+    }
+  }
+}

@@ -99,13 +99,13 @@ button {
   backdrop-filter: blur(40px);
 }
 
-.portfolio, .weekly {
+.bootcamps, .portfolio, .weekly {
   margin-bottom: 22px;
 }
-.portfolio:last-child, .weekly:last-child {
+.bootcamps:last-child, .portfolio:last-child, .weekly:last-child {
   margin-bottom: 0;
 }
-.portfolio__title, .weekly__title {
+.bootcamps__title, .portfolio__title, .weekly__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,11 +115,19 @@ button {
   color: #0050ff;
   font-size: 14px;
 }
-.portfolio__list, .weekly__list {
+.bootcamps__list, .portfolio__list, .weekly__list {
   padding-top: 12px;
   padding-bottom: 24px;
 }
 
+.bootcamps__list .card {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+}
 .header__navigation {
   display: flex;
   align-items: center;
@@ -439,4 +447,21 @@ button {
   display: inline-flex;
   gap: 3px;
   font-size: 14px;
+}
+
+.bootcamps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-x: auto;
+}
+@media (min-width: 830px) {
+  .bootcamps__list {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.bootcamps__list .card {
+  background: lightgray 50%;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
 }/*# sourceMappingURL=practice.css.map */
