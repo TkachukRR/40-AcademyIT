@@ -19,8 +19,19 @@
 
     .card {
       @extend %card;
+      position: relative;
+
       background: lightgray 50%;
       box-shadow: $shadow-2;
+
+      .title {
+        position: absolute;
+        top: 18px;
+        left: 27px;
+        color: $text-color-primary;
+        font-size: $font-size-xxxs;
+        font-weight: $font-weight-bold;
+      }
     }
   }
 }
