@@ -114,20 +114,15 @@
 
       color: $text-color-secondary;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: $font-weight-semi;
       line-height: 18px;
       letter-spacing: -0.4px;
 
       .title {
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
-
-        /* Subheadline/Emphasized */
         color: $text-color-primary;
 
-        font-size: 15px;
-        font-weight: 700;
+        font-size: $font-size-s;
+        font-weight: $font-weight-bold;
         line-height: 20px;
       }
 

@@ -115,7 +115,7 @@ button {
   color: #0050ff;
   font-size: 14px;
 }
-.bootcamps__list, .portfolio__list, .weekly__list {
+.mentorship__list, .bootcamps__list, .portfolio__list, .weekly__list {
   padding-top: 12px;
   padding-bottom: 24px;
 }
@@ -410,7 +410,6 @@ button {
   letter-spacing: -0.4px;
 }
 .portfolio .card__main .title {
-  /* Subheadline/Emphasized */
   color: #000;
   font-size: 15px;
   font-weight: 700;
@@ -464,4 +463,125 @@ button {
 .bootcamps__list .card {
   background: lightgray 50%;
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+}
+
+.mentorship {
+  color: #484d5c;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+.mentorship__title {
+  color: #000;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+.mentorship__text {
+  font-size: 15px;
+  line-height: 20px;
+}
+.mentorship__aspects .aspects__title {
+  color: #000;
+  font-size: 16px;
+  line-height: 21px;
+  min-height: 42px;
+}
+.mentorship__aspects .aspects__list {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  counter-reset: list-counter;
+}
+.mentorship__aspects .aspects__item {
+  counter-increment: list-counter;
+}
+.mentorship__aspects .aspects__item::before {
+  content: counter(list-counter) ". ";
+}
+.mentorship__list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+@media (min-width: 830px) {
+  .mentorship__list {
+    justify-content: center;
+  }
+}
+.mentorship__item {
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+.mentorship__item .card {
+  border-radius: 30px;
+  background: #e8e8f1;
+  width: 322px;
+  overflow: hidden;
+}
+.mentorship__item .card__header {
+  border-radius: 30px;
+  background: lightgray;
+  overflow: hidden;
+}
+.mentorship__item .card__main {
+  padding: 14px 52px 0 21px;
+  margin-bottom: 15px;
+  color: #484d5c;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.4px;
+}
+.mentorship__item .card__main .title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.mentorship__item .card__main .text {
+  font-size: 13px;
+  line-height: 18px;
+  min-height: 54px;
+  margin-bottom: 10px;
+}
+.mentorship__item .card__main .btn {
+  width: 140px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #0050ff;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.mentorship__item .card__main .list {
+  counter-reset: list-counter;
+  margin: 10px 0;
+}
+.mentorship__item .card__main .list__item {
+  counter-increment: list-counter;
+}
+.mentorship__item .card__main .list__item::before {
+  content: counter(list-counter) ". ";
+}
+.mentorship__item .card__footer {
+  padding: 0 20px 20px 20px;
+}
+.mentorship__item .card__footer .btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 100px;
+  padding: 7px 12px;
+  background: #0050ff;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.mentorship__item .card__footer .btn .coin {
+  display: inline-flex;
+  gap: 3px;
+  font-size: 14px;
 }/*# sourceMappingURL=practice.css.map */
