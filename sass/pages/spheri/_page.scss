@@ -1,0 +1,19 @@
+.header {
+  @extend %header;
+
+  background-color: transparent;
+}
+
+.main {
+  @extend %main;
+}
+
+.header,
+.main {
+  background-image: url('/images/bg_spheri.webp');
+  background-size: 100% 239px;
+}
+
+.footer {
+  @extend %footer;
+}
