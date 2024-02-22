@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+  padding: 10px;
+
+  &__item {
+    display: flex;
+    padding: 8px 0;
+
+    .stick {
+      display: flex;
+      height: 8px;
+      width: 8px;
+
+      background-color: currentColor;
+      border-radius: 50%;
+
+      opacity: 0.3;
+    }
+
+    &:nth-last-of-type(2) {
+      .stick {
+        height: 6px;
+        width: 6px;
+      }
+    }
+
+    &:last-of-type {
+      .stick {
+        height: 4px;
+        width: 4px;
+      }
+    }
+
+    .checkbox,
+    .value {
+      @extend %is-hidden;
+    }
+  }
+
+  .checkbox:checked + .stick {
+    opacity: 1;
+  }
+}

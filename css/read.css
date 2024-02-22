@@ -145,6 +145,47 @@ button {
   gap: 7px;
   justify-content: space-around;
 }
+.pagination__item .checkbox,
+.pagination__item .value {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+.pagination__item {
+  display: flex;
+  padding: 8px 0;
+}
+.pagination__item .stick {
+  display: flex;
+  height: 8px;
+  width: 8px;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.pagination__item:nth-last-of-type(2) .stick {
+  height: 6px;
+  width: 6px;
+}
+.pagination__item:last-of-type .stick {
+  height: 4px;
+  width: 4px;
+}
+.pagination .checkbox:checked + .stick {
+  opacity: 1;
+}
+
 .header__navigation {
   display: flex;
   align-items: center;
@@ -315,45 +356,6 @@ button {
 .slide__text {
   padding-top: 6px;
   flex-basis: 197px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 8px;
-}
-.pagination__item {
-  height: 8px;
-  width: 8px;
-}
-.pagination__item:nth-last-of-type(2) {
-  height: 6px;
-  width: 6px;
-}
-.pagination__item:last-of-type {
-  height: 4px;
-  width: 4px;
-}
-
-.stick {
-  display: flex;
-  align-items: center;
-  fill: rgba(0, 0, 0, 0.3019607843);
-}
-.stick__checkbox {
-  display: block;
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-.stick__checkbox:checked + .stick__svg {
-  fill: #000000;
-}
-.stick__svg {
-  width: 100%;
-  height: 100%;
 }
 
 .books__list {
