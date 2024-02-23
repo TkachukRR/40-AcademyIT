@@ -1,0 +1,42 @@
+.message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #484d5c;
+  position: sticky;
+  bottom: $page-footer-height;
+  background-color: $background-primary;
+
+  .textfield {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-radius: 100px;
+    background: rgba(220, 220, 233, 0.6);
+    padding: 6px 37px 6px 11px;
+
+    textarea {
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: -0.4px;
+
+      &::placeholder {
+        color: #484d5c;
+      }
+    }
+  }
+
+  button {
+    color: #484d5c;
+  }
+
+  .record {
+    position: absolute;
+    right: 20px + 8px; //container padding + inner padding
+  }
+}

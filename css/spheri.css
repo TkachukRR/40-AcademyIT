@@ -111,26 +111,13 @@ button {
   justify-content: space-between;
   font-size: 22px;
 }
-.options input {
+.header .options input {
   display: inline-block;
   height: 0;
   width: 0;
   margin: 0;
   padding: 0;
   visibility: hidden;
-}
-
-.header {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header,
-.main {
-  background-image: url("/images/bg_spheri.webp");
-  background-size: 100% 239px;
 }
 
 .footer__nav {
@@ -160,23 +147,21 @@ button {
   fill: #0050ff;
 }
 
-.icon {
-  display: inline-block;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  vertical-align: middle;
+.header {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.options {
+.header .options {
   display: inline-flex;
   gap: 16px;
 }
-.options input:checked + svg {
+.header .options input:checked + svg {
   opacity: 0.4;
 }
 
-.title {
+.main .title {
   position: absolute;
   top: 0;
   right: 50%;
@@ -188,9 +173,14 @@ button {
   line-height: 1;
   font-weight: 700;
 }
-
-.image {
+.main .image {
   margin: 0 auto;
+}
+
+.header,
+.main {
+  background-image: url("/images/bg_spheri.webp");
+  background-size: 100% 239px;
 }
 
 .issues__list-wrapper {
@@ -279,8 +269,7 @@ button {
 .dialog__item {
   margin-bottom: 17px;
 }
-
-.post {
+.dialog .post {
   color: #484d5c;
   font-size: 13px;
   font-weight: 600;
@@ -289,11 +278,11 @@ button {
   display: flex;
   gap: 6px;
 }
-.post .avatar {
+.dialog .post .avatar {
   border-radius: 29px;
   float: left;
 }
-.post .name {
+.dialog .post .name {
   padding-top: 3px;
   overflow: hidden;
   color: #000;
@@ -301,15 +290,15 @@ button {
   font-weight: 700;
   line-height: 20px;
 }
-.post .list {
+.dialog .post .list {
   padding: 1em 0;
   counter-reset: list-counter;
 }
-.post .list__item {
+.dialog .post .list__item {
   counter-increment: list-counter;
   display: flex;
 }
-.post .list__item::before {
+.dialog .post .list__item::before {
   content: counter(list-counter) ". ";
   padding: 0 7px;
   color: #000;
@@ -317,24 +306,32 @@ button {
   font-weight: 700;
   line-height: 20px;
 }
-.post .list .item__title {
+.dialog .post .list .item__title {
   color: #000;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
 }
-.post .actions {
+.dialog .post .actions {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
 }
-.post .actions__btn {
+.dialog .post .actions__btn {
   color: #484d5c;
 }
-.post .actions .controls {
+.dialog .post .actions .controls {
   display: flex;
   gap: 18px;
 }
-.post .actions .controls__btn {
+.dialog .post .actions .controls__btn {
   color: #484d5c;
+}
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
 }/*# sourceMappingURL=spheri.css.map */

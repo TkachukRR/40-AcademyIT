@@ -5,10 +5,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .options {
+    display: inline-flex;
+    gap: 16px;
+
+    input {
+      @extend %is-hidden;
+    }
+
+    input:checked + svg {
+      opacity: 0.4;
+    }
+  }
 }
 
 .main {
   @extend %main;
+
+  .title {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 999999;
+
+    margin: 0;
+    padding: (($page-header-height - $font-size-l) / 2) 0;
+
+    font-size: $font-size-l;
+    line-height: 1;
+    font-weight: $font-weight-bold;
+  }
+
+  .image {
+    margin: 0 auto;
+  }
 }
 
 .header,

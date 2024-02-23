@@ -1,0 +1,11 @@
+@import './issues';
+@import './massege';
+@import './dialog';
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+}
