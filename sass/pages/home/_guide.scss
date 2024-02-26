@@ -44,6 +44,7 @@
     &__title {
       @extend %card__title;
       margin-bottom: 9px;
+      padding-right: 18px;
       min-height: 2em;
       color: $text-color-primary;
     }

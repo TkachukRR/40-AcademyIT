@@ -29,11 +29,55 @@
   & .card {
     @extend %card;
 
+    color: $text-color-primary;
+    font-size: $font-size-xxxs;
+    font-weight: $font-weight-bold;
+    line-height: 10px;
+
     flex-shrink: 0;
     box-shadow: $shadow-2;
 
     &:hover {
       box-shadow: $shadow-2-hover;
+    }
+
+    &__content {
+      position: absolute;
+      top: 13px;
+      left: 24px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .description {
+        max-width: 96px;
+      }
+
+      .level {
+        border-radius: 4px;
+        text-transform: uppercase;
+        padding: 0 4px;
+        vertical-align: middle;
+        line-height: 13px;
+
+        color: $text-color-ternary;
+
+        &--master {
+          background: black;
+        }
+
+        &--expert {
+          background: #484d5c;
+        }
+
+        &--professional {
+          background: #ff004e;
+        }
+
+        &--advanced {
+          background: #848998;
+        }
+      }
     }
   }
 }

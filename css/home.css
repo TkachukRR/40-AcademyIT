@@ -250,6 +250,7 @@ button {
 }
 .guide .card__title {
   margin-bottom: 9px;
+  padding-right: 18px;
   min-height: 2em;
   color: #000;
 }
@@ -282,12 +283,15 @@ button {
   overflow: hidden;
   position: relative;
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
+  color: #fff;
 }
 .reels__card:hover {
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.3), 0px 0px 24px 0px rgba(0, 0, 0, 0.1) inset;
 }
-.reels__card svg {
-  fill: #fff;
+.reels__button button {
+  color: inherit;
+  fill: currentColor;
+  font-weight: 700;
 }
 .reels__button--bookmark {
   position: absolute;
@@ -299,7 +303,7 @@ button {
   bottom: 10px;
   left: 9px;
 }
-.reels__button--up a {
+.reels__button--up button {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -312,8 +316,9 @@ button {
 
 .agree__reaction {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+  gap: 70px;
   margin-top: 20px;
   padding: 12px 47px 10px;
   border-radius: 100px;
@@ -352,11 +357,46 @@ button {
   color: #fff;
 }
 .hot .card {
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 10px;
   flex-shrink: 0;
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1), 0px 0px 24px 0px rgba(0, 0, 0, 0.05) inset;
 }
 .hot .card:hover {
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.3), 0px 0px 24px 0px rgba(0, 0, 0, 0.1) inset;
+}
+.hot .card__content {
+  position: absolute;
+  top: 13px;
+  left: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.hot .card__content .description {
+  max-width: 96px;
+}
+.hot .card__content .level {
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 0 4px;
+  vertical-align: middle;
+  line-height: 13px;
+  color: #fff;
+}
+.hot .card__content .level--master {
+  background: black;
+}
+.hot .card__content .level--expert {
+  background: #484d5c;
+}
+.hot .card__content .level--professional {
+  background: #ff004e;
+}
+.hot .card__content .level--advanced {
+  background: #848998;
 }
 
 .education__logo {

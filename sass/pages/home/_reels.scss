@@ -35,17 +35,20 @@
 
     position: relative;
     box-shadow: $shadow-2;
+    color: $text-color-ternary;
 
     &:hover {
       box-shadow: $shadow-2-hover;
     }
-
-    svg {
-      fill: $text-color-ternary;
-    }
   }
 
   &__button {
+    button {
+      color: inherit;
+      fill: currentColor;
+      font-weight: $font-weight-bold;
+    }
+
     &--bookmark {
       position: absolute;
       top: 12px;
@@ -57,7 +60,7 @@
       bottom: 10px;
       left: 9px;
 
-      a {
+      button {
         display: flex;
         align-items: center;
         gap: 4px;
