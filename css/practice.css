@@ -128,6 +128,16 @@ button {
   border-radius: 30px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
 }
+.weekly__list .card__buttons {
+  position: absolute;
+  top: 21px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  justify-content: space-around;
+}
 .pagination__item .checkbox,
 .pagination__item .value {
   display: inline-block;
@@ -241,6 +251,12 @@ button {
   border-radius: 30px;
   background: #e8e8f1;
   overflow: hidden;
+}
+.weekly__list .card__buttons {
+  fill: #fff;
+  align-items: end;
+  top: 18px;
+  right: 16px;
 }
 .weekly__list .card__title {
   color: #000;

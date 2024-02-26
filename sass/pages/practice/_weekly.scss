@@ -24,6 +24,14 @@
       background: #e8e8f1;
       overflow: hidden;
 
+      &__buttons {
+        @extend %card__buttons;
+        fill: $text-color-ternary;
+        align-items: end;
+        top: 18px;
+        right: 16px;
+      }
+
       &__title {
         color: $text-color-primary;
         font-size: $font-size-m;
