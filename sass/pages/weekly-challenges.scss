@@ -1,0 +1,271 @@
+@import '../common/variables';
+@import '../common/general';
+@import '../common/elements';
+@import '../common/placeholders';
+
+@import './home/footer';
+
+.header {
+  @extend %header;
+}
+
+.main {
+  @extend %main;
+}
+
+.header,
+.main {
+}
+
+.footer {
+  @extend %footer;
+}
+
+.popup {
+  position: absolute;
+  top: $page-header-height / 2;
+  left: 0;
+  border: none;
+  z-index: 7500;
+  border-radius: 10px 10px 0px 0px;
+
+  background: linear-gradient(0deg, #5c5c5c 0%, #5c5c5c 100%),
+    rgba(153, 153, 153, 0.97);
+  background-blend-mode: color-dodge, normal;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(25px);
+  padding-bottom: $page-footer-height;
+
+  &__header {
+    position: fixed;
+    z-index: 7501;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 56px;
+
+    border-radius: 10px 10px 0px 0px;
+
+    background: #ebecec;
+
+    .resizer {
+      margin: 5px auto;
+      width: 36px;
+      height: 5px;
+      border-radius: 2.5px;
+      background: linear-gradient(
+          0deg,
+          rgba(61, 61, 61, 0.5) 0%,
+          rgba(61, 61, 61, 0.5) 100%
+        ),
+        rgba(127, 127, 127, 0.4);
+      background-blend-mode: overlay, luminosity;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px; /* 127.273% */
+        letter-spacing: -0.4px;
+      }
+
+      .close {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #cacbcb;
+        background-blend-mode: overlay, luminosity;
+
+        fill: #757676;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 56px + 6px;
+    height: calc(100vh - $page-header-height / 2 - $page-footer-height);
+    overflow-y: auto;
+
+    .content {
+      &__header {
+        text-align: center;
+        margin-bottom: 10px;
+
+        .card {
+          display: inline-block;
+          position: relative;
+          border-radius: 30px;
+          overflow: hidden;
+
+          &__buttons {
+            @extend %card__buttons;
+            top: 18px;
+            right: 16px;
+          }
+        }
+      }
+
+      &__main {
+        padding: 0 16px;
+        margin-bottom: 10px;
+
+        .progress {
+          &__title {
+            color: $text-color-secondary;
+            font-size: $font-size-xxs;
+            font-weight: $font-weight-semi;
+            margin-bottom: 5px;
+          }
+
+          &__bar {
+            height: 4px;
+            border-radius: 100px;
+            background: rgba(120, 120, 128, 0.2);
+            margin-bottom: 10px;
+          }
+          &__bar-inner {
+            min-width: 4px;
+            height: 100%;
+            border-radius: 100px;
+            background: $text-color-accent;
+          }
+        }
+
+        .title {
+          color: $text-color-primary;
+          font-weight: $font-weight-bold;
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: -0.4px;
+        }
+      }
+
+      &__footer {
+        padding: 0 16px;
+
+        .details {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 26px;
+
+          .designers {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            .avatars {
+              display: flex;
+
+              &__item {
+                width: 30px;
+                height: 30px;
+                border: 1px solid $text-color-ternary;
+                border-radius: 50%;
+                overflow: hidden;
+
+                &:not(:first-of-type) {
+                  margin-left: -15px;
+                }
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+
+            &__stats {
+              width: 93px;
+
+              color: $text-color-secondary;
+              font-size: 11px;
+              font-style: normal;
+              font-weight: $font-weight-semi;
+              line-height: 13px;
+            }
+          }
+
+          .btn {
+            width: 140px;
+            height: 32px;
+            flex-shrink: 0;
+            border-radius: 100px;
+            background: $text-color-accent;
+            color: $text-color-ternary;
+            text-align: center;
+            font-size: 12px;
+            font-weight: $font-weight-bold;
+          }
+        }
+
+        .text {
+          color: $text-color-secondary;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 18px; /* 138.462% */
+          letter-spacing: -0.4px;
+          margin-bottom: 20px;
+        }
+
+        .list {
+          color: $text-color-secondary;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: -0.4px;
+
+          .item {
+            margin-bottom: 1em;
+
+            &__title {
+              color: $text-color-primary;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 20px; /* 133.333% */
+            }
+
+            .sub-list {
+              counter-reset: list-counter;
+
+              &__item {
+                counter-increment: list-counter;
+                display: flex;
+
+                &::before {
+                  content: counter(list-counter) '. ';
+                  padding: 0 7px;
+                }
+              }
+
+              &--circle {
+                li {
+                  display: flex;
+                  // align-items: first baseline;
+                }
+
+                li::before {
+                  content: '';
+                  margin: 7px 10px 0;
+                  border-radius: 50%;
+                  background-color: currentColor;
+                  width: 4px;
+                  height: 4px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

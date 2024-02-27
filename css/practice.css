@@ -60,7 +60,7 @@ button {
 
 .header {
   position: fixed;
-  z-index: 8000;
+  z-index: 7000;
   top: 0;
   left: 0;
   height: 37px;
@@ -349,6 +349,9 @@ button {
   text-align: center;
   font-size: 12px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .portfolio__list {
   display: flex;
