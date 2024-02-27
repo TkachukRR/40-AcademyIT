@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spheri Flashcard</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/spheri-flashcard.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header container"></header>
+
+    <main class="main"></main>
+
+    <footer class="footer">
+      <nav>
+        <ul class="footer__nav">
+          <li class="sub-list__item">
+            <a href="./index.html" class="footer__link">
+              <svg class="icon" height="20" width="22">
+                <use xlink:href="/images/sprite.svg#icon-bar-menu--home"></use>
+              </svg>
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="./read.html" class="footer__link">
+              <svg class="icon" height="20" width="16">
+                <use xlink:href="/images/sprite.svg#icon-bar-menu--read"></use>
+              </svg>
+              Read
+            </a>
+          </li>
+
+          <li>
+            <a href="./learn.html" class="footer__link footer__link--active">
+              <svg class="icon" height="23" width="25">
+                <use xlink:href="/images/sprite.svg#icon-bar-menu--learn"></use>
+              </svg>
+              Learn
+            </a>
+          </li>
+
+          <li>
+            <a href="/practice.html" class="footer__link">
+              <svg class="icon" height="22" width="22">
+                <use
+                  xlink:href="/images/sprite.svg#icon-bar-menu--practice"
+                ></use>
+              </svg>
+              Practice
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer__link">
+              <svg class="icon" height="17" width="35">
+                <use
+                  xlink:href="/images/sprite.svg#icon-bar-menu--collective"
+                ></use>
+              </svg>
+              Collective
+            </a>
+          </li>
+
+          <li>
+            <a href="/spheri.html" class="footer__link">
+              <img
+                src="/images/nav_spheri.png"
+                alt="spheri"
+                height="25"
+                width="26"
+              />
+              Spheri
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <dialog class="popup" open>
+      <div class="popup__header container">
+        <div class="resizer"></div>
+        <a href="javascript:history.back()" class="close">
+          <svg class="icon" height="12" width="12">
+            <use xlink:href="/images/sprite.svg#icon-menu--close"></use>
+          </svg>
+        </a>
+        <div class="content">
+          <h2 class="title">Spheri</h2>
+        </div>
+      </div>
+
+      <div class="popup__content content scrollbar-no">
+        <div class="content__header container">
+          <div class="text">
+            Spheri, like every human, can make mistakes. Work wisely, make sure
+            you’re going to the right direction ;-)
+          </div>
+        </div>
+
+        <div class="content__main">
+          <ul class="dialog container">
+            <li class="dialog__item">
+              <div class="post">
+                <img
+                  class="avatar"
+                  src="/images/photo.webp"
+                  alt="name"
+                  height="29"
+                  width="28"
+                />
+                <div>
+                  <h4 class="name">You</h4>
+                  <p class="text">
+                    How to balancing Business Goals and User Needs?
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="dialog__item">
+              <div class="post">
+                <img
+                  class="avatar"
+                  src="/images/nav_spheri.png"
+                  alt="name"
+                  height="30"
+                  width="29"
+                />
+                <div>
+                  <h4 class="name">Spheri</h4>
+                  <div class="text">
+                    Balancing business goals and user needs is a critical aspect
+                    of UX design, often requiring a careful and strategic
+                    approach. Here are some key strategies to achieve this
+                    balance:
+                    <ul class="list">
+                      <li class="list__item">
+                        <div class="item">
+                          <h5 class="item__title">
+                            Understand Business Objectives:
+                          </h5>
+                          Start by clearly understanding the business
+                          objectives. Know what the business aims to achieve
+                          through the product or service, whether it's
+                          increasing sales, improving customer retention, or
+                          expanding into new markets.
+                        </div>
+                      </li>
+
+                      <li class="list__item">
+                        <div class="item">
+                          <h5 class="item__title">Conduct User Research:</h5>
+                          Gather detailed insights about your users. Understand
+                          their needs, pain points, preferences, and behaviors.
+                          This will help in creating designs that are not only
+                          user-friendly but also align with business goals.
+                        </div>
+                      </li>
+
+                      <li class="list__item">
+                        <div class="item">
+                          <h5 class="item__title">Identify Common Ground:</h5>
+                          Look for areas where business goals and user needs
+                          overlap. For example, a feature that enhances user
+                          experience might also lead to increased customer
+                          retention, which is a common business goal.
+                        </div>
+                      </li>
+
+                      <li class="list__item">
+                        <div class="item">
+                          <h5 class="item__title">Prioritize Features:</h5>
+                          Not all features will equally serve both business
+                          goals and user needs. Prioritize features based on
+                          their impact on both areas. Use tools like a
+                          prioritization matrix to make informed decisions.
+                        </div>
+                      </li>
+
+                      <li class="list__item">
+                        <div class="item">
+                          <h5 class="item__title">
+                            Iterative Design and Testing:
+                          </h5>
+                          Use an iterative design process. Prototype, test,
+                          gather feedback, and refine. This approach helps in
+                          aligning the product with both user needs and business
+                          objectives over time.
+                        </div>
+                      </li>
+                    </ul>
+                    By employing these strategies, UX designers can create
+                    solutions that not only delight and serve the users but also
+                    drive business success. Balancing these two aspects is key
+                    to creating sustainable, effective, and successful digital
+                    products and services.
+
+                    <div class="actions">
+                      <ul class="controls">
+                        <li>
+                          <button type="button" class="controls__btn">
+                            <svg class="icon" height="21" width="24">
+                              <use
+                                xlink:href="/images/sprite.svg#icon-copy"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="controls__btn">
+                            <svg class="icon" height="21" width="23">
+                              <use
+                                xlink:href="/images/sprite.svg#icon-thumbs--up"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="controls__btn">
+                            <svg class="icon" height="21" width="23">
+                              <use
+                                xlink:href="/images/sprite.svg#icon-thumbs--down"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="controls__btn">
+                            <svg class="icon" height="21" width="19">
+                              <use
+                                xlink:href="/images/sprite.svg#icon-undo"
+                              ></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+
+                      <button type="button" class="actions__btn">
+                        <svg class="icon" height="21" width="20">
+                          <use
+                            xlink:href="/images/sprite.svg#icon-bookmark"
+                          ></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content__footer">
+          <div class="message container">
+            <button class="add" type="button">
+              <svg class="icon" height="26" width="27">
+                <use xlink:href="/images/sprite.svg#icon-add"></use>
+              </svg>
+            </button>
+
+            <label class="textfield">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                rows="1"
+              ></textarea>
+            </label>
+
+            <button type="button" class="record">
+              <svg class="icon" height="19" width="20">
+                <use xlink:href="/images/sprite.svg#icon-audio-record"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
