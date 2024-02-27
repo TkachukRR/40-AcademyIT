@@ -1,0 +1,302 @@
+@import '../common/variables';
+@import '../common/general';
+@import '../common/elements';
+@import '../common/placeholders';
+
+@import './home/footer';
+
+.header {
+  @extend %header;
+}
+
+.main {
+  @extend %main;
+}
+
+.header,
+.main {
+}
+
+.footer {
+  @extend %footer;
+}
+
+.popup {
+  width: 100%;
+  position: absolute;
+  top: $page-header-height / 2;
+  left: 0;
+  border: none;
+  z-index: 7500;
+  border-radius: 10px 10px 0px 0px;
+
+  background: linear-gradient(0deg, #5c5c5c 0%, #5c5c5c 100%),
+    rgba(153, 153, 153, 0.97);
+  background-blend-mode: color-dodge, normal;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(25px);
+  padding-bottom: $page-footer-height;
+
+  &__header {
+    position: fixed;
+    z-index: 7501;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 56px;
+
+    border-radius: 10px 10px 0px 0px;
+
+    background: #ebecec;
+
+    .resizer {
+      margin: 5px auto;
+      width: 36px;
+      height: 5px;
+      border-radius: 2.5px;
+      background: linear-gradient(
+          0deg,
+          rgba(61, 61, 61, 0.5) 0%,
+          rgba(61, 61, 61, 0.5) 100%
+        ),
+        rgba(127, 127, 127, 0.4);
+      background-blend-mode: overlay, luminosity;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px; /* 127.273% */
+        letter-spacing: -0.4px;
+      }
+
+      .close {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #cacbcb;
+        background-blend-mode: overlay, luminosity;
+
+        fill: #757676;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 56px + 6px;
+    height: calc(100vh - $page-header-height / 2 - $page-footer-height);
+    overflow-y: auto;
+
+    .content {
+      &__header {
+        padding: 0 35px;
+
+        text-align: center;
+        margin-bottom: 14px;
+
+        .card {
+          display: inline-block;
+          position: relative;
+          border-radius: 30px;
+          overflow: hidden;
+        }
+      }
+
+      &__main {
+        padding: 0 35px;
+        margin-bottom: 28px;
+        font-weight: $font-weight-bold;
+        letter-spacing: -0.4px;
+
+        .text {
+          color: $text-color-primary;
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 1em;
+        }
+
+        .description {
+          color: $text-color-accent;
+          font-size: 17px;
+          line-height: 22px;
+          margin-bottom: 0.5em;
+        }
+
+        .btn {
+          width: 140px;
+          height: 32px;
+          flex-shrink: 0;
+          border-radius: 100px;
+          background: $text-color-accent;
+          color: $text-color-ternary;
+          text-align: center;
+          font-size: 12px;
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      &__footer {
+        padding: 0 35px;
+
+        .title {
+          color: $text-color-primary;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: -0.4px;
+          margin-bottom: 1em;
+        }
+
+        .list {
+          color: $text-color-secondary;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: -0.4px;
+          counter-reset: list-counter;
+
+          &__item {
+            counter-increment: list-counter;
+            display: flex;
+
+            &::before {
+              content: counter(list-counter) '. ';
+              padding: 0 7px;
+              color: $text-color-primary;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 20px;
+            }
+          }
+
+          .item {
+            margin-bottom: 1em;
+
+            &__title {
+              color: $text-color-primary;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      &__mentorship {
+        .mentorship {
+          &__list {
+            @extend %section__content;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+
+            @media (min-width: 1024px) {
+              justify-content: center;
+            }
+          }
+
+          &__item {
+            flex-shrink: 0;
+
+            .card {
+              border-radius: 30px;
+              background: #e8e8f1;
+              width: 322px;
+              overflow: hidden;
+
+              &__header {
+                border-radius: 30px;
+                background: lightgray;
+                overflow: hidden;
+              }
+
+              &__main {
+                padding: 14px 52px 0 21px;
+                margin-bottom: 15px;
+
+                color: $text-color-secondary;
+                font-size: 13px;
+                font-weight: $font-weight-semi;
+                line-height: 18px;
+                letter-spacing: -0.4px;
+
+                .title {
+                  color: $text-color-primary;
+                  font-size: 20px;
+                  font-weight: $font-weight-bold;
+                  line-height: 25px;
+                }
+
+                .text {
+                  font-size: 13px;
+                  line-height: 18px;
+
+                  min-height: 3 * 18px;
+                  margin-bottom: 10px;
+                }
+
+                .btn {
+                  width: 140px;
+                  height: 32px;
+                  flex-shrink: 0;
+                  border-radius: 100px;
+                  background: $text-color-accent;
+                  color: $text-color-ternary;
+                  text-align: center;
+                  font-size: 12px;
+                  font-weight: $font-weight-bold;
+                }
+
+                .list {
+                  counter-reset: list-counter;
+                  margin: 10px 0;
+
+                  &__item {
+                    counter-increment: list-counter;
+
+                    &::before {
+                      content: counter(list-counter) '. ';
+                    }
+                  }
+                }
+              }
+
+              &__footer {
+                padding: 0 20px 20px 20px;
+
+                .btn {
+                  display: flex;
+                  align-items: center;
+                  gap: 7px;
+                  border-radius: 100px;
+                  padding: 7px 12px;
+                  background: $text-color-accent;
+
+                  color: $text-color-ternary;
+                  text-align: center;
+                  font-size: 12px;
+                  font-weight: $font-weight-bold;
+
+                  .coin {
+                    display: inline-flex;
+                    gap: 3px;
+
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

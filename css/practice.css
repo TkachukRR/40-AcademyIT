@@ -581,6 +581,9 @@ button {
   margin-bottom: 10px;
 }
 .mentorship__item .card__main .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 32px;
   flex-shrink: 0;
