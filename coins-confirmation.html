@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coins Confirmation</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/coins-confirmation.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header container"></header>
+
+    <main class="main"></main>
+
+    <footer class="footer"></footer>
+
+    <dialog class="modal-window container" open>
+      <div class="modal">
+        <div class="modal__header">
+          <h2 class="title">Coins Spend Confirmation</h2>
+          <div class="coins">1500</div>
+          <div class="confirmation">
+            You're going to spend 1500 Coins, please confirm
+          </div>
+          <div class="notification">
+            Sorry, you don't have enough Coins. Earn some or buy more Coins.
+            Your current Coins Balance is 650 Coins.
+          </div>
+        </div>
+        <div class="modal__footer">
+          <ul class="buttons">
+            <li class="buttons__item">
+              <button class="btn btn--accent" type="button">
+                Buy More Coins
+              </button>
+            </li>
+            <li class="buttons__item">
+              <button class="btn" type="button">Mine Some Coins</button>
+            </li>
+            <li class="buttons__item">
+              <button class="btn" type="button">Cancel</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
