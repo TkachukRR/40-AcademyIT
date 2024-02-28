@@ -107,7 +107,7 @@ button {
   width: 100%;
   border: none;
   z-index: 9000;
-  background: #000;
+  background: rgba(0, 0, 0, 0.3137254902);
 }
 
 .modal {
@@ -135,24 +135,33 @@ button {
 .modal__header .title--colored {
   padding-top: 9px;
   margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
   background: linear-gradient(136deg, #e600ff 7.37%, #053ffa 103.85%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.modal__header .title--colored::before {
+.modal__header .title--colored.colored {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.modal__header .title--colored.colored::before {
   content: "";
   display: block;
-  width: 33px;
-  height: 33px;
-  background-image: url(/images/smile.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.modal__header .title--colored.colored--candy::before {
+  width: 45px;
+  height: 45px;
+  background-image: url(/images/candy.webp);
+}
+.modal__header .title--colored.colored--smile::before {
+  width: 33px;
+  height: 33px;
+  background-image: url(/images/smile.webp);
 }
 .modal__header .coins {
   display: flex;
@@ -200,6 +209,7 @@ button {
 }
 .modal__footer .buttons .btn {
   padding: 11px 0;
+  width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #0050ff;
@@ -209,4 +219,4 @@ button {
 .modal__footer .buttons .btn--accent {
   font-size: 17px;
   font-weight: 700;
-}/*# sourceMappingURL=start-quiz.css.map */
+}/*# sourceMappingURL=modal.css.map */
