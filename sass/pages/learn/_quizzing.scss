@@ -70,10 +70,13 @@
     }
 
     &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 100px;
       width: 120px;
       height: 32px;
-      background: var(--Colors-Blue-DMI, #0050ff);
+      background: $text-color-accent;
 
       color: $text-color-ternary;
       text-align: center;

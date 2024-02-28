@@ -332,10 +332,13 @@ button {
   align-items: center;
 }
 .quizzing .card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
   width: 120px;
   height: 32px;
-  background: var(--Colors-Blue-DMI, #0050ff);
+  background: #0050ff;
   color: #fff;
   text-align: center;
   font-size: 12px;

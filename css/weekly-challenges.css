@@ -277,6 +277,9 @@ button {
   line-height: 13px;
 }
 .popup__content .content__footer .details .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 32px;
   flex-shrink: 0;
@@ -333,4 +336,18 @@ button {
   width: 4px;
   height: 4px;
   display: inline-block;
+}
+.popup__content .content__footer .btn {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #0050ff;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
 }/*# sourceMappingURL=weekly-challenges.css.map */
