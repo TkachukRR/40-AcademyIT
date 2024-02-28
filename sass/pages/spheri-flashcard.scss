@@ -13,36 +13,28 @@
   @extend %main;
 }
 
-.header,
-.main {
-}
-
 .footer {
   @extend %footer;
 }
 
 .popup {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: $page-header-height / 2;
   left: 0;
+  height: calc(100% - $page-header-height / 2 - $page-footer-height);
   border: none;
   z-index: 7500;
   border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
 
   background: linear-gradient(0deg, #5c5c5c 0%, #5c5c5c 100%),
     rgba(153, 153, 153, 0.97);
   background-blend-mode: color-dodge, normal;
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(25px);
-  padding-bottom: $page-footer-height;
 
   &__header {
-    position: fixed;
-    z-index: 7501;
-    width: 100%;
-    left: 0;
-    top: 0;
     height: 56px;
 
     border-radius: 10px 10px 0px 0px;
@@ -53,9 +45,11 @@
     background-size: 100% 239px;
     background-position-y: -$mobile-bar-height - $page-header-height / 2;
     background-repeat: no-repeat;
+    padding-top: 5px;
 
     .resizer {
-      margin: 5px auto;
+      margin: 0 auto;
+      margin-bottom: 5px;
       width: 36px;
       height: 5px;
       border-radius: 2.5px;
@@ -95,15 +89,12 @@
   }
 
   &__content {
-    position: relative;
-
-    padding-top: 56px + 25px;
-    height: calc(100vh - $page-header-height / 2 - $page-footer-height);
+    height: calc(100% - 42px - 56px);
     overflow-y: auto;
 
     background-image: url('/images/bg_spheri.webp');
     background-size: 100% 239px;
-    background-position-y: -$mobile-bar-height - $page-header-height / 2;
+    background-position-y: -$mobile-bar-height - $page-header-height / 2 - 56px;
     background-repeat: no-repeat;
 
     .content {
@@ -122,7 +113,7 @@
       }
 
       &__main {
-        margin-bottom: 44px;
+        // margin-bottom: 44px;
         .dialog {
           &__item {
             margin-bottom: 17px;
@@ -203,53 +194,58 @@
       }
 
       &__footer {
-        position: fixed;
-        bottom: $page-footer-height;
-        width: 100%;
+      }
+    }
+  }
 
-        .message {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-          color: #484d5c;
-          position: sticky;
-          bottom: $page-footer-height;
-          background-color: $background-primary;
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7501;
 
-          .textfield {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            border-radius: 100px;
-            background: rgba(220, 220, 233, 0.6);
-            padding: 6px 37px 6px 11px;
-            margin: 5px 0;
+    .message {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #484d5c;
+      position: sticky;
+      bottom: $page-footer-height;
+      background-color: $background-primary;
 
-            textarea {
-              border: none;
-              outline: none;
-              background-color: transparent;
+      .textfield {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        border-radius: 100px;
+        background: rgba(220, 220, 233, 0.6);
+        padding: 6px 37px 6px 11px;
+        margin: 5px 0;
 
-              font-size: 14px;
-              font-weight: 600;
-              line-height: 20px;
-              letter-spacing: -0.4px;
+        textarea {
+          border: none;
+          outline: none;
+          background-color: transparent;
 
-              &::placeholder {
-                color: #484d5c;
-              }
-            }
-          }
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: -0.4px;
 
-          button {
+          &::placeholder {
             color: #484d5c;
           }
-
-          .record {
-            position: absolute;
-            right: 20px + 8px; //container padding + inner padding
-          }
         }
+      }
+
+      button {
+        color: #484d5c;
+      }
+
+      .record {
+        position: absolute;
+        right: 20px + 8px; //container padding + inner padding
       }
     }
   }

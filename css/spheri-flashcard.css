@@ -128,24 +128,20 @@ button {
 
 .popup {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 18.5px;
   left: 0;
+  height: calc(100% - 18.5px - 54px);
   border: none;
   z-index: 7500;
   border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
   background: linear-gradient(0deg, #5c5c5c 0%, #5c5c5c 100%), rgba(153, 153, 153, 0.97);
   background-blend-mode: color-dodge, normal;
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(25px);
-  padding-bottom: 54px;
 }
 .popup__header {
-  position: fixed;
-  z-index: 7501;
-  width: 100%;
-  left: 0;
-  top: 0;
   height: 56px;
   border-radius: 10px 10px 0px 0px;
   background: #ebecec;
@@ -153,9 +149,11 @@ button {
   background-size: 100% 239px;
   background-position-y: -72.5px;
   background-repeat: no-repeat;
+  padding-top: 5px;
 }
 .popup__header .resizer {
-  margin: 5px auto;
+  margin: 0 auto;
+  margin-bottom: 5px;
   width: 36px;
   height: 5px;
   border-radius: 2.5px;
@@ -184,13 +182,11 @@ button {
   letter-spacing: -0.4px;
 }
 .popup__content {
-  position: relative;
-  padding-top: 81px;
-  height: calc(100vh - 18.5px - 54px);
+  height: calc(100% - 42px - 56px);
   overflow-y: auto;
   background-image: url("/images/bg_spheri.webp");
   background-size: 100% 239px;
-  background-position-y: -72.5px;
+  background-position-y: -128.5px;
   background-repeat: no-repeat;
 }
 .popup__content .content__header {
@@ -204,9 +200,6 @@ button {
   line-height: 13px;
   text-align: center;
   max-width: 350px;
-}
-.popup__content .content__main {
-  margin-bottom: 44px;
 }
 .popup__content .content__main .dialog__item {
   margin-bottom: 17px;
@@ -269,12 +262,14 @@ button {
 .popup__content .content__main .dialog .post .actions .controls__btn {
   color: #484d5c;
 }
-.popup__content .content__footer {
-  position: fixed;
-  bottom: 54px;
+.popup__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  z-index: 7501;
 }
-.popup__content .content__footer .message {
+.popup__footer .message {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -283,7 +278,7 @@ button {
   bottom: 54px;
   background-color: #fff;
 }
-.popup__content .content__footer .message .textfield {
+.popup__footer .message .textfield {
   display: flex;
   align-items: center;
   flex: 1;
@@ -292,7 +287,7 @@ button {
   padding: 6px 37px 6px 11px;
   margin: 5px 0;
 }
-.popup__content .content__footer .message .textfield textarea {
+.popup__footer .message .textfield textarea {
   border: none;
   outline: none;
   background-color: transparent;
@@ -301,13 +296,13 @@ button {
   line-height: 20px;
   letter-spacing: -0.4px;
 }
-.popup__content .content__footer .message .textfield textarea::placeholder {
+.popup__footer .message .textfield textarea::placeholder {
   color: #484d5c;
 }
-.popup__content .content__footer .message button {
+.popup__footer .message button {
   color: #484d5c;
 }
-.popup__content .content__footer .message .record {
+.popup__footer .message .record {
   position: absolute;
   right: 28px;
 }/*# sourceMappingURL=spheri-flashcard.css.map */
