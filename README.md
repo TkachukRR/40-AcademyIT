@@ -1,10 +1,10 @@
-# Academy UX/UI
+# Academy IT
 
-Academy UX/UI is a project designed for online UX/UI education.
+Academy IT is a project designed for online UX/UI education.
 
 ## Description
 
-The Academy UX/UI project is a web application designed for online learning of the UX/UI designer profession or for improving qualifications. This repository contains pages prepared for use in the Blazor framework, allowing you to build a full-fledged mobile application with elements such as menus, filtering, user cabinets, purchasing goods, pop-ups, etc.
+The Academy IT project is a web application designed for online learning of the UX/UI designer profession or for improving qualifications. This repository contains pages prepared for use in the Blazor framework, allowing you to build a full-fledged mobile application with elements such as menus, filtering, user cabinets, purchasing goods, pop-ups, etc.
 
 ## Technologies
 
